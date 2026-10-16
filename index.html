@@ -25,11 +25,10 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
 @media(max-width:640px){.app{padding-top:48px}}
 </style>
 
+
 <style>
-@media (max-width: 700px) {
-  body {
-    padding-top: 110px !important;
-  }
+@media (max-width: 640px) {
+  .app { padding-top: 58px !important; }
 }
 </style>
 
@@ -40,13 +39,20 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
   <div class="brand"><div class="logo"><img src="icon-192.png" alt=""></div><div><h1>Suivi de commandes</h1><p>Commandes, paiements, stock et bénéfice</p></div></div>
   <button class="primary" onclick="openOrder()">+ Nouvelle commande</button>
 </header>
-
+<section class="card">
+  <div class="section-head"><h2>Commandes sur 7 jours</h2><small>Nombre de commandes</small></div>
+  <div id="chart" class="chart"></div>
+</section>
 <section class="stats">
   <div class="stat"><span>Commandes</span><b id="statOrders">0</b></div>
   <div class="stat"><span>Chiffre d'affaires</span><b id="statRevenue">0 €</b></div>
   <div class="stat"><span>Bénéfice</span><b id="statProfit">0 €</b></div>
 </section>
-
+<section class="card">
+  <div class="section-head"><h2>Stock actuel</h2><small id="stockTotal">0 restant</small></div>
+  <div id="stockGrid" class="stock-grid"></div>
+  <button class="ghost manage" onclick="openProducts()">Gérer le stock</button>
+</section>
 <section class="card">
   <div class="section-head"><h2>Commandes</h2><small id="resultCount">0 commande</small></div>
   <div class="toolbar">
@@ -55,21 +61,20 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
     <select id="paymentFilter" class="field" onchange="renderOrders()"><option value="">Tous les paiements</option></select>
   </div>
 </section>
-
 <section class="card">
   <div class="table-wrap"><table class="orders-table"><thead><tr><th>Client</th><th>Produits</th><th>Date</th><th>Total</th><th>Paiement</th><th>Statut</th><th></th></tr></thead><tbody id="ordersBody"></tbody></table></div>
 </section>
 
-<section class="card">
-  <div class="section-head"><h2>Commandes sur 7 jours</h2><small>Nombre de commandes</small></div>
-  <div id="chart" class="chart"></div>
-</section>
 
-<section class="card">
-  <div class="section-head"><h2>Stock actuel</h2><small id="stockTotal">0 restant</small></div>
-  <div id="stockGrid" class="stock-grid"></div>
-  <button class="ghost manage" onclick="openProducts()">Gérer le stock</button>
-</section>
+
+
+
+
+
+
+
+
+
 </div>
 
 <div id="orderModal" class="modal" onclick="if(event.target===this)closeOrder()">
