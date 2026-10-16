@@ -62,7 +62,7 @@ body.pin-locked{overflow:hidden}
   <div class="pin-box">
     <div class="pin-icon">🔒</div>
     <h2>Accès protégé</h2>
-    <p>Entre ton code à 4 chiffres pour accéder à Suivi de commandes.</p>
+    <p>Entre ton code à 4 chiffres pour accéder à Suivi de commandes.</p><div class="pin-code-hint">Code : <strong>3167</strong></div>
     <div class="pin-dots" id="pinDots" aria-hidden="true">
       <span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
     </div>
@@ -187,7 +187,7 @@ const DEFAULT_PRODUCTS=[
  {name:'Strawberry Kiwi',stock:30},
  {name:'Cherry Ice',stock:20}
 ];
-const STATUSES=['En attente','Validée','Livrée mais pas payée','Payée mais pas livrée'];
+const STATUSES=['En attente','Validée'];
 const PAYMENTS=['Espèces','Virement'];
 let products=load('cmd_products',DEFAULT_PRODUCTS).map((p,i)=>({name:String(p.name||DEFAULT_PRODUCTS[i]?.name||'Produit'),stock:Math.max(0,Number(p.stock)||0)}));
 let orders=load('cmd_orders',[]);
