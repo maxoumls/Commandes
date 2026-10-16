@@ -21,6 +21,8 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
 .table-wrap{overflow:hidden}.orders-table{width:100%;border-collapse:collapse;font-size:12px}.orders-table th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:9px 8px;border-bottom:1px solid var(--line)}.orders-table td{padding:10px 8px;border-bottom:1px solid rgba(42,48,58,.7);vertical-align:middle}.orders-table tr:last-child td{border-bottom:0}.customer{font-weight:800}.items{color:var(--muted);line-height:1.35}.money{font-weight:850}.date{color:var(--muted);white-space:nowrap}.status-select{height:31px;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:8px;padding:0 7px;font-size:10px;max-width:170px}.payment{color:#cfd4dc}.row-actions{display:flex;gap:5px}.icon-btn{width:31px;height:31px;border:1px solid var(--line);border-radius:8px;background:var(--card2);color:var(--text);font-size:13px}.empty{text-align:center;padding:28px 12px;color:var(--muted);font-size:12px}
 .chart{height:185px;display:flex;align-items:flex-end;gap:10px;padding:12px 4px 0}.bar-col{height:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;min-width:0}.bar-value{font-size:10px;color:var(--muted);height:14px}.bar-track{height:125px;width:100%;max-width:54px;display:flex;align-items:flex-end;background:#111419;border-radius:9px;overflow:hidden}.bar{width:100%;background:#e9eaed;border-radius:8px 8px 0 0;min-height:0;transition:height .2s}.bar-label{font-size:10px;color:var(--muted)}
 .stock-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stock-item{background:#111419;border:1px solid var(--line);border-radius:11px;padding:10px}.stock-item .name{font-size:11px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stock-item .qty{font-size:19px;font-weight:850;margin-top:5px}.stock-item.low .qty{color:var(--warn)}.stock-item.empty .qty{color:var(--bad)}.manage{margin-top:10px;width:100%}
+
+.orders-list{display:grid;gap:7px}.order-card{background:#111419;border:1px solid var(--line);border-radius:12px;padding:10px 12px;transition:border-color .15s,background .15s}.order-card:hover{border-color:#3b424d;background:#14171d}.order-main{display:flex;align-items:center;justify-content:space-between;gap:12px}.order-client-wrap{min-width:0}.order-client{font-size:13px;font-weight:850;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.order-date{font-size:9px;color:var(--muted);margin-top:3px}.order-total{font-size:15px;font-weight:900;white-space:nowrap;letter-spacing:-.03em}.order-products{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.product-chip{display:inline-flex;align-items:center;gap:3px;background:#1a1e25;border:1px solid #2b313b;border-radius:7px;padding:4px 7px;font-size:9px;color:#cdd2da;line-height:1}.product-chip b{color:#fff}.order-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;padding-top:7px;border-top:1px solid rgba(42,48,58,.65)}.order-meta{min-width:0}.payment-pill{display:inline-flex;align-items:center;min-height:24px;padding:0 8px;border-radius:7px;background:#191d23;color:#bfc5ce;border:1px solid #2a303a;font-size:9px;font-weight:750}.order-controls{display:flex;align-items:center;gap:5px}.order-status{height:27px!important;min-width:86px;font-size:9px!important;border-radius:7px!important}.order-status.is-valid{border-color:rgba(70,201,138,.35);color:#71dca8}.order-status.is-pending{border-color:rgba(231,173,85,.35);color:#e8bc73}.danger-btn{color:#ff8b8b}.empty-order{padding:25px 12px;text-align:center;color:var(--muted);font-size:11px;background:#111419;border:1px dashed var(--line);border-radius:12px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.68);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.show{display:flex}.modal-box{width:min(680px,100%);max-height:90vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.45)}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.modal-head h2{margin:0;font-size:17px}.close{width:34px;height:34px;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:9px}.form-label{display:block;color:var(--muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:15px 0 7px}.form-input,.form-select{width:100%;height:40px;border:1px solid var(--line);background:#111419;color:var(--text);border-radius:10px;padding:0 11px;outline:none}.items-editor{display:grid;gap:8px}.item-line{display:grid;grid-template-columns:1fr 90px 34px;gap:7px;align-items:center}.remove-item{height:40px;border:1px solid var(--line);background:#111419;color:#ff8c8c;border-radius:10px}.add-line{margin-top:8px}.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}.form-actions button{min-height:40px}.total-box{margin-top:14px;background:#111419;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center}.total-box span{color:var(--muted);font-size:11px}.total-box b{font-size:20px}.price-note{font-size:10px;color:var(--muted);line-height:1.5;margin-top:8px}.price-editor{margin-top:14px}.price-editor .form-input{font-size:18px;font-weight:800}.product-row{display:grid;grid-template-columns:1fr 110px 34px;gap:8px;align-items:center;margin-bottom:8px}.product-row input{min-width:0}.danger{color:#ff8b8b}.notice{font-size:11px;color:var(--muted);line-height:1.5}
 @media(max-width:760px){.app{padding:84px 10px 30px}header{margin-bottom:12px}.brand h1{font-size:19px}.brand p{display:none}.primary{min-height:38px;padding:0 11px}.stats{gap:7px}.stat{padding:12px 11px;border-radius:12px}.stat b{font-size:19px}.stat span{font-size:9px}.card{padding:12px;border-radius:13px}.toolbar{display:grid;grid-template-columns:1fr 1fr}.search{grid-column:1/-1;width:100%;min-width:0}.field{width:100%;height:37px}.orders-table thead{display:none}.orders-table,.orders-table tbody,.orders-table tr,.orders-table td{display:block;width:100%}.orders-table tr{position:relative;padding:10px 0;border-bottom:1px solid var(--line)}.orders-table tr:last-child{border-bottom:0}.orders-table td{border:0;padding:2px 0}.orders-table td:nth-child(1){padding-right:80px}.orders-table td:nth-child(2){padding-right:80px}.orders-table td:nth-child(3){margin-top:4px}.orders-table td:nth-child(4){position:absolute;right:0;top:10px}.orders-table td:nth-child(5){position:absolute;right:0;top:47px}.orders-table td:nth-child(6){display:none}.orders-table td:nth-child(7){position:absolute;right:0;bottom:9px}.orders-table td:nth-child(7) .row-actions{justify-content:flex-end}.status-select{max-width:150px}.stock-grid{grid-template-columns:1fr 1fr}.chart{gap:5px;height:160px}.bar-track{height:105px}.item-line{grid-template-columns:1fr 76px 34px}.modal{padding:10px}.modal-box{max-height:94vh;padding:14px}.form-actions{position:sticky;bottom:0;background:var(--card);padding-top:10px}.product-row{grid-template-columns:1fr 78px 34px}}
 @media(max-width:640px){.app{padding-top:72px}}
@@ -98,6 +100,8 @@ html,body{width:100%;overflow-x:hidden}
   .status-select{width:auto;max-width:150px;height:30px}
 }
 </style>
+
+@media(max-width:760px){.orders-list{gap:5px}.order-card{padding:9px 10px;border-radius:10px}.order-client{font-size:12px}.order-total{font-size:14px}.order-products{margin-top:6px;gap:4px}.product-chip{padding:4px 6px;font-size:8px}.order-footer{margin-top:6px;padding-top:6px}.payment-pill{min-height:22px;padding:0 7px;font-size:8px}.order-status{height:25px!important;min-width:82px}.order-controls{gap:4px}.order-card .icon-btn{width:26px;height:26px;font-size:12px}}
 </head>
 <body>
 
@@ -127,7 +131,7 @@ html,body{width:100%;overflow-x:hidden}
     <select id="statusFilter" class="field" onchange="renderOrders()"><option value="">Tous les statuts</option></select>
     <select id="paymentFilter" class="field" onchange="renderOrders()"><option value="">Tous les paiements</option></select>
   </div>
-  <div class="table-wrap"><table class="orders-table"><thead><tr><th>Client</th><th>Produits</th><th>Date</th><th>Total</th><th>Paiement</th><th>Statut</th><th></th></tr></thead><tbody id="ordersBody"></tbody></table></div>
+  <div id="ordersBody" class="orders-list"></div>
 </section>
 
 
@@ -246,18 +250,26 @@ function renderOrders(){
  const list=orders.filter(o=>{const text=[o.client,...o.items.map(i=>i.product)].join(' ').toLowerCase();return(!q||text.includes(q))&&(!sf||o.status===sf)&&(!pf||o.payment===pf)});
  document.getElementById('resultCount').textContent=`${list.length} commande${list.length>1?'s':''}`;
  const body=document.getElementById('ordersBody');
- if(!list.length){body.innerHTML='<tr><td colspan="7" class="empty">Aucune commande trouvée.</td></tr>';return}
- body.innerHTML=list.map(o=>`<tr>
- <td><div class="customer">${esc(o.client)}</div></td>
- <td><div class="items">${o.items.map(i=>`${i.qty}× ${esc(i.product)}`).join('<br>')}</div></td>
- <td><div class="date">${dateText(o.createdAt)}</div></td>
- <td><div class="money">${money(o.total)}</div></td>
- <td><div class="payment">${esc(o.payment)}</div></td>
- <td><select class="status-select" onchange="changeStatus('${o.id}',this.value)">${STATUSES.map(s=>`<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select></td>
- <td><div class="row-actions"><button class="icon-btn" title="Modifier" onclick="editOrder('${o.id}')">✎</button><button class="icon-btn" title="Supprimer" onclick="deleteOrder('${o.id}')">×</button></div></td>
- </tr>`).join('');
+ if(!list.length){body.innerHTML='<div class="empty-order">Aucune commande trouvée.</div>';return}
+ body.innerHTML=list.map(o=>`<article class="order-card">
+   <div class="order-main">
+     <div class="order-client-wrap">
+       <div class="order-client">${esc(o.client)}</div>
+       <div class="order-date">${dateText(o.createdAt)}</div>
+     </div>
+     <div class="order-total">${money(o.total)}</div>
+   </div>
+   <div class="order-products">${o.items.map(i=>`<span class="product-chip"><b>${i.qty}×</b> ${esc(i.product)}</span>`).join('')}</div>
+   <div class="order-footer">
+     <div class="order-meta"><span class="payment-pill">${esc(o.payment)}</span></div>
+     <div class="order-controls">
+       <select class="status-select order-status ${o.status==='Validée'?'is-valid':'is-pending'}" onchange="changeStatus('${o.id}',this.value)">${STATUSES.map(s=>`<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select>
+       <div class="row-actions"><button class="icon-btn" title="Modifier" onclick="editOrder('${o.id}')">✎</button><button class="icon-btn danger-btn" title="Supprimer" onclick="deleteOrder('${o.id}')">×</button></div>
+     </div>
+   </div>
+ </article>`).join('');
 }
-function renderStats(){const revenue=orders.reduce((s,o)=>s+Number(o.total||0),0),sold=orders.reduce((s,o)=>s+totalQty(o.items||[]),0);document.getElementById('statOrders').textContent=orders.length;document.getElementById('statRevenue').textContent=money(revenue);document.getElementById('statProfit').textContent=money(revenue-sold*COST)}
+function renderStats(){const valid=orders.filter(o=>o.status==='Validée');const revenue=valid.reduce((s,o)=>s+Number(o.total||0),0),sold=valid.reduce((s,o)=>s+totalQty(o.items||[]),0);document.getElementById('statOrders').textContent=valid.length;document.getElementById('statRevenue').textContent=money(revenue);document.getElementById('statProfit').textContent=money(revenue-sold*COST)}
 function renderChart(){
  const el=document.getElementById('chart'),days=[];for(let i=6;i>=0;i--){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-i);days.push(d)}
  const counts=days.map(d=>orders.filter(o=>{const x=new Date(o.createdAt);return x.getFullYear()===d.getFullYear()&&x.getMonth()===d.getMonth()&&x.getDate()===d.getDate()}).length),max=Math.max(1,...counts);
