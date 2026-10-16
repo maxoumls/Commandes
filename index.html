@@ -31,7 +31,11 @@ body{
 }
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
-.app{max-width:1440px;margin:auto;padding:30px 30px 50px}
+.app{
+  max-width:1440px;
+  margin:auto;
+  padding:calc(30px + env(safe-area-inset-top)) 30px 50px;
+}
 header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
 .brand{display:flex;align-items:center;gap:13px}
 .logo{
@@ -168,7 +172,9 @@ td small{color:var(--muted)}
   #search{width:100%}
 }
 @media(max-width:600px){
-  .app{padding:14px 10px 30px}
+  .app{
+  padding:calc(20px + env(safe-area-inset-top)) 10px 30px;
+}
   .stats{gap:8px}.stat{padding:14px}
   .stat b{font-size:22px}
   .formgrid{grid-template-columns:1fr}
