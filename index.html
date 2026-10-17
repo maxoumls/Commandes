@@ -22,13 +22,13 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
 
 .stock-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stock-item{background:#111419;border:1px solid var(--line);border-radius:11px;padding:10px}.stock-item .name{font-size:11px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stock-item .qty{font-size:19px;font-weight:850;margin-top:5px}.stock-item.low .qty{color:var(--warn)}.stock-item.empty .qty{color:var(--bad)}.manage{margin-top:10px;width:100%}
 
-.orders-list{display:grid;gap:7px}.order-card{background:#111419;border:1px solid var(--line);border-radius:12px;padding:10px 12px;transition:border-color .15s,background .15s}.order-card:hover{border-color:#3b424d;background:#14171d}.order-main{display:flex;align-items:center;justify-content:space-between;gap:12px}.order-client-wrap{min-width:0}.order-client{font-size:13px;font-weight:850;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.order-date{font-size:9px;color:var(--muted);margin-top:3px}.order-total{font-size:15px;font-weight:900;white-space:nowrap;letter-spacing:-.03em}.order-products{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.product-chip{display:inline-flex;align-items:center;gap:3px;background:#1a1e25;border:1px solid #2b313b;border-radius:7px;padding:4px 7px;font-size:9px;color:#cdd2da;line-height:1}.product-chip b{color:#fff}.order-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;padding-top:7px;border-top:1px solid rgba(42,48,58,.65)}.order-meta{min-width:0}.payment-pill{display:inline-flex;align-items:center;min-height:24px;padding:0 8px;border-radius:7px;background:#191d23;color:#bfc5ce;border:1px solid #2a303a;font-size:9px;font-weight:750}.order-controls{display:flex;align-items:center;gap:5px}.order-status{height:27px!important;min-width:86px;font-size:9px!important;border-radius:7px!important}.order-status.is-valid{border-color:rgba(70,201,138,.35);color:#71dca8}.order-status.is-pending{border-color:rgba(231,173,85,.35);color:#e8bc73}.danger-btn{color:#ff8b8b}.empty-order{padding:25px 12px;text-align:center;color:var(--muted);font-size:11px;background:#111419;border:1px dashed var(--line);border-radius:12px}
+.orders-list{display:grid;gap:7px}.order-card{background:#111419;border:1px solid var(--line);border-radius:12px;padding:10px 12px;transition:border-color .15s,background .15s}.order-card:hover{border-color:#3b424d;background:#14171d}.order-main{display:flex;align-items:center;justify-content:space-between;gap:12px}.order-client-wrap{min-width:0}.order-client{font-size:14px;font-weight:850;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.order-date{font-size:10px;color:var(--muted);margin-top:3px}.order-total{font-size:15px;font-weight:900;white-space:nowrap;letter-spacing:-.03em}.order-products{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.product-chip{display:inline-flex;align-items:center;gap:3px;background:#1a1e25;border:1px solid #2b313b;border-radius:7px;padding:4px 7px;font-size:10px;color:#cdd2da;line-height:1}.product-chip b{color:#fff}.order-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;padding-top:7px;border-top:1px solid rgba(42,48,58,.65)}.order-meta{min-width:0}.payment-pill{display:inline-flex;align-items:center;min-height:24px;padding:0 8px;border-radius:7px;background:#191d23;color:#bfc5ce;border:1px solid #2a303a;font-size:10px;font-weight:750}.order-controls{display:flex;align-items:center;gap:5px}.order-status{height:27px!important;min-width:86px;font-size:9px!important;border-radius:7px!important}.order-status.is-valid{border-color:rgba(70,201,138,.35);color:#71dca8}.order-status.is-pending{border-color:rgba(231,173,85,.35);color:#e8bc73}.danger-btn{color:#ff8b8b}.empty-order{padding:25px 12px;text-align:center;color:var(--muted);font-size:11px;background:#111419;border:1px dashed var(--line);border-radius:12px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.68);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.show{display:flex}.modal-box{width:min(680px,100%);max-height:90vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.45)}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.modal-head h2{margin:0;font-size:17px}.close{width:34px;height:34px;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:9px}.form-label{display:block;color:var(--muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:15px 0 7px}.form-input,.form-select{width:100%;height:40px;border:1px solid var(--line);background:#111419;color:var(--text);border-radius:10px;padding:0 11px;outline:none}.items-editor{display:grid;gap:8px}.item-line{display:grid;grid-template-columns:1fr 90px 34px;gap:7px;align-items:center}.remove-item{height:40px;border:1px solid var(--line);background:#111419;color:#ff8c8c;border-radius:10px}.add-line{margin-top:8px}.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}.form-actions button{min-height:40px}.total-box{margin-top:14px;background:#111419;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center}.total-box span{color:var(--muted);font-size:11px}.total-box b{font-size:20px}.price-note{font-size:10px;color:var(--muted);line-height:1.5;margin-top:8px}.price-editor{margin-top:14px}.price-editor .form-input{font-size:18px;font-weight:800}.product-row{display:grid;grid-template-columns:1fr 110px 34px;gap:8px;align-items:center;margin-bottom:8px}.product-row input{min-width:0}.danger{color:#ff8b8b}.notice{font-size:11px;color:var(--muted);line-height:1.5}
 @media(max-width:760px){.app{padding:84px 10px 30px}header{margin-bottom:12px}.brand h1{font-size:19px}.brand p{display:none}.primary{min-height:38px;padding:0 11px}.stats{gap:7px}.stat{padding:12px 11px;border-radius:12px}.stat b{font-size:19px}.stat span{font-size:9px}.card{padding:12px;border-radius:13px}.toolbar{display:grid;grid-template-columns:1fr 1fr}.search{grid-column:1/-1;width:100%;min-width:0}.field{width:100%;height:37px}.orders-table thead{display:none}.orders-table,.orders-table tbody,.orders-table tr,.orders-table td{display:block;width:100%}.orders-table tr{position:relative;padding:10px 0;border-bottom:1px solid var(--line)}.orders-table tr:last-child{border-bottom:0}.orders-table td{border:0;padding:2px 0}.orders-table td:nth-child(1){padding-right:80px}.orders-table td:nth-child(2){padding-right:80px}.orders-table td:nth-child(3){margin-top:4px}.orders-table td:nth-child(4){position:absolute;right:0;top:10px}.orders-table td:nth-child(5){position:absolute;right:0;top:47px}.orders-table td:nth-child(6){display:none}.orders-table td:nth-child(7){position:absolute;right:0;bottom:9px}.orders-table td:nth-child(7) .row-actions{justify-content:flex-end}.status-select{max-width:150px}.stock-grid{grid-template-columns:1fr 1fr}item-line{grid-template-columns:1fr 76px 34px}.modal{padding:10px}.modal-box{max-height:94vh;padding:14px}.form-actions{position:sticky;bottom:0;background:var(--card);padding-top:10px}.product-row{grid-template-columns:1fr 78px 34px}}
 @media(max-width:640px){.app{padding-top:72px}}
 
 .orders-card{padding-bottom:8px}.orders-head{margin-bottom:8px}.orders-filters{display:grid;grid-template-columns:minmax(0,1fr) 175px 175px;gap:6px;margin-bottom:5px}.orders-filters .field{height:34px}.orders-card .table-wrap{margin-top:0}.orders-table th{padding:6px 7px;font-size:9px}.orders-table td{padding:6px 7px;font-size:11px}.orders-table .customer{font-size:12px}.orders-table .items{line-height:1.15}.orders-table .status-select{height:27px}.orders-table .icon-btn{width:28px;height:28px}.orders-table .row-actions{gap:4px}
-@media(max-width:760px){.app{padding-top:90px!important}.orders-filters{grid-template-columns:1fr 1fr;gap:6px;margin-bottom:4px}.orders-filters .search{grid-column:1/-1}.orders-filters .field{height:33px}.orders-table tr{padding:8px 0}.orders-table td{font-size:10px!important}.orders-table .customer{font-size:11px}.orders-table .items{line-height:1.1}.orders-table .status-select{height:27px}.orders-table .icon-btn{width:27px;height:27px}}
+@media(max-width:760px){.app{padding-top:90px!important}.orders-filters{grid-template-columns:1fr 1fr;gap:6px;margin-bottom:4px}.orders-filters .search{grid-column:1/-1}.orders-filters .field{height:33px}.orders-table tr{padding:8px 0}.orders-table td{font-size:10px!important}.orders-table .customer{font-size:12px}.orders-table .items{line-height:1.1}.orders-table .status-select{height:27px}.orders-table .icon-btn{width:27px;height:27px}}
 </style>
 
 
@@ -99,6 +99,18 @@ html,body{width:100%;overflow-x:hidden}
   .payment{font-size:10px}
   .status-select{width:auto;max-width:150px;height:30px}
 }
+
+/* === CART CREATION UI === */
+.cart-products{display:grid;gap:8px}
+.cart-product{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;background:#111419;border:1px solid var(--line);border-radius:12px;padding:11px 12px;transition:.15s}
+.cart-product.selected{border-color:#454d59;background:#15191f}
+.cart-product-info{min-width:0}.cart-product-name{font-size:12px;font-weight:800}.cart-product-stock{font-size:9px;color:var(--muted);margin-top:4px}
+.stepper{display:flex;align-items:center;gap:6px}.stepper button{width:34px;height:34px;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:9px;font-size:18px;line-height:1;font-weight:800}.stepper button:disabled{opacity:.35;cursor:not-allowed}.stepper-value{min-width:24px;text-align:center;font-size:13px;font-weight:900}
+.cart-summary{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-top:12px;background:#111419;border:1px solid var(--line);border-radius:12px;padding:12px}.cart-summary-label{font-size:10px;color:var(--muted)}.cart-summary-value{font-size:21px;font-weight:900;letter-spacing:-.03em}.cart-summary-sub{font-size:9px;color:var(--muted);margin-top:3px}
+.notes-input{width:100%;min-height:78px;resize:vertical;border:1px solid var(--line);background:#111419;color:var(--text);border-radius:10px;padding:10px 11px;outline:none}.notes-input:focus{border-color:#5d6673;box-shadow:0 0 0 3px rgba(255,255,255,.04)}
+.detail-note{background:#111419;border:1px solid var(--line);border-radius:11px;padding:11px 12px;font-size:12px;line-height:1.45;color:#d5d9df}.detail-section{margin-top:18px}.detail-section h3{margin:0 0 9px;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}.detail-items{display:grid;gap:7px}.detail-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#111419;border:1px solid var(--line);border-radius:11px;padding:11px 12px}.detail-item-name{font-weight:750}.detail-item-qty{color:var(--muted);font-size:11px}.detail-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}.detail-client{font-size:24px;font-weight:900;letter-spacing:-.04em}.detail-date{margin-top:5px;color:var(--muted);font-size:11px}.detail-total{text-align:right;font-size:25px;font-weight:900;letter-spacing:-.04em;white-space:nowrap}.detail-status{display:inline-flex;align-items:center;margin-top:8px;padding:5px 9px;border-radius:8px;background:#191d23;border:1px solid var(--line);font-size:10px;font-weight:800}.detail-status.valid{color:#71dca8;border-color:rgba(70,201,138,.35)}.detail-status.pending{color:#e8bc73;border-color:rgba(231,173,85,.35)}.detail-info{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail-info-card{background:#111419;border:1px solid var(--line);border-radius:11px;padding:11px 12px}.detail-info-card span{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}.detail-info-card b{font-size:12px}.detail-finance{display:flex;justify-content:space-between;align-items:center;padding-top:13px;margin-top:13px;border-top:1px solid var(--line)}.detail-finance span{color:var(--muted);font-size:11px}.detail-finance b{font-size:18px}.order-card{cursor:pointer}.order-card .order-controls,.order-card .order-controls *{cursor:default}
+@media(max-width:760px){.cart-product{padding:10px}.stepper button{width:32px;height:32px}.detail-hero{gap:10px}.detail-client{font-size:20px}.detail-total{font-size:21px}.detail-info{grid-template-columns:1fr}.modal{padding:10px}.modal-box{max-height:94vh;padding:14px}}
+
 </style>
 
 </head>
@@ -112,12 +124,11 @@ html,body{width:100%;overflow-x:hidden}
 <section class="stats">
   <div class="stat"><span>Commandes validées</span><b id="statOrders">0</b></div>
   <div class="stat"><span>CA validé</span><b id="statRevenue">0 €</b></div>
-  <div class="stat"><span>Bénéfice validé</span><b id="statProfit">0 €</b></div>
 </section>
 <section class="card">
   <div class="section-head"><h2>Stock actuel</h2><small id="stockTotal">0 restant</small></div>
   <div id="stockGrid" class="stock-grid"></div>
-  <button class="ghost manage" onclick="openProducts()">Gérer le stock</button>
+  
 </section>
 <section class="card orders-card">
   <div class="section-head orders-head"><h2>Commandes</h2><small id="resultCount">0 commande</small></div>
@@ -141,23 +152,38 @@ html,body{width:100%;overflow-x:hidden}
 
 </div>
 
+<div id="orderDetailModal" class="modal" onclick="if(event.target===this)closeOrderDetail()">
+ <div class="modal-box">
+  <div class="modal-head"><h2>Détail de la commande</h2><button class="close" onclick="closeOrderDetail()">×</button></div>
+  <div id="orderDetailContent"></div>
+ </div>
+</div>
+
 <div id="orderModal" class="modal" onclick="if(event.target===this)closeOrder()">
  <div class="modal-box">
   <div class="modal-head"><h2 id="orderModalTitle">Nouvelle commande</h2><button class="close" onclick="closeOrder()">×</button></div>
-  <label class="form-label" for="clientName">Prénom du client</label>
-  <input id="clientName" class="form-input" placeholder="Ex. Thomas">
-  <label class="form-label">Produits</label>
-  <div id="itemsEditor" class="items-editor"></div>
-  <button class="ghost add-line" onclick="addItemLine()">+ Ajouter un produit</button>
-  <label class="form-label" for="payment">Paiement</label>
+
+  <label class="form-label" for="clientName">1. Client</label>
+  <input id="clientName" class="form-input" placeholder="Prénom du client" autocomplete="off">
+
+  <label class="form-label">2. Produits</label>
+  <div id="itemsEditor" class="cart-products"></div>
+  <div class="cart-summary"><div><div class="cart-summary-label">Récapitulatif</div><div id="cartQty" class="cart-summary-sub">0 puff</div></div><div id="orderTotal" class="cart-summary-value">0 €</div></div>
+
+  <label class="form-label" for="payment">3. Paiement</label>
   <select id="payment" class="form-select"><option>À définir</option><option>Espèces</option><option>Virement</option></select>
-  <label class="form-label" for="status">Statut</label>
+
+  <label class="form-label" for="status">4. Statut</label>
   <select id="status" class="form-select"></select>
-  <label class="form-label" for="orderPrice">Prix final</label>
+
+  <label class="form-label" for="orderPrice">5. Prix final</label>
   <input id="orderPrice" class="form-input price-editor" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0,00">
   <div class="price-note">Le prix est calculé automatiquement selon la quantité. Tu peux le modifier ici pour appliquer une réduction ou un autre tarif.</div>
-  <div class="total-box"><span>Total enregistré</span><b id="orderTotal">0 €</b></div>
-  <div class="form-actions"><button class="ghost" onclick="closeOrder()">Annuler</button><button class="primary" onclick="saveOrder()">Enregistrer</button></div>
+
+  <label class="form-label" for="orderNotes">6. Notes</label>
+  <textarea id="orderNotes" class="notes-input" placeholder="Optionnel : remarque, livraison, préférence…"></textarea>
+
+  <div class="form-actions"><button class="ghost" onclick="closeOrder()">Annuler</button><button class="primary" onclick="saveOrder()">✓ Enregistrer la commande</button></div>
  </div>
 </div>
 
@@ -186,6 +212,7 @@ let products=load('cmd_products',DEFAULT_PRODUCTS).map((p,i)=>({name:String(p.na
 let orders=load('cmd_orders',[]);
 let editingId=null;
 let priceManuallyEdited=false;
+let draftQty={};
 function load(key,fallback){try{const v=JSON.parse(localStorage.getItem(key));return v??structuredClone(fallback)}catch{return structuredClone(fallback)}}
 function save(){localStorage.setItem('cmd_products',JSON.stringify(products));localStorage.setItem('cmd_orders',JSON.stringify(orders))}
 function money(n){return Number(n||0).toLocaleString('fr-BE',{style:'currency',currency:'EUR',maximumFractionDigits:2})}
@@ -208,33 +235,66 @@ function fillFilters(){
  document.getElementById('status').innerHTML=STATUSES.map(s=>`<option>${s}</option>`).join('');
 }
 function openOrder(id=null){
- editingId=id;priceManuallyEdited=false;document.getElementById('orderModal').classList.add('show');
+ editingId=id;priceManuallyEdited=false;draftQty={};
+ document.getElementById('orderModal').classList.add('show');
  document.getElementById('orderModalTitle').textContent=id?'Modifier la commande':'Nouvelle commande';
- if(id){const o=orders.find(x=>x.id===id);document.getElementById('clientName').value=o.client;document.getElementById('payment').value=o.payment;document.getElementById('status').value=o.status;document.getElementById('itemsEditor').innerHTML='';o.items.forEach(x=>addItemLine(x.product,x.qty));document.getElementById('orderPrice').value=Number(o.total||0).toFixed(2);priceManuallyEdited=true;updateTotal()}
- else{document.getElementById('clientName').value='';document.getElementById('payment').value='À définir';document.getElementById('status').value='En attente';document.getElementById('itemsEditor').innerHTML='';addItemLine(products[0]?.name||'',1);priceManuallyEdited=false;updateTotal()}
+ if(id){
+  const o=orders.find(x=>x.id===id); if(!o)return;
+  document.getElementById('clientName').value=o.client||'';
+  document.getElementById('payment').value=o.payment||'À définir';
+  document.getElementById('status').value=o.status||'En attente';
+  document.getElementById('orderNotes').value=o.notes||'';
+  for(const x of (o.items||[])) draftQty[x.product]=Number(x.qty)||0;
+  document.getElementById('orderPrice').value=Number(o.total||0).toFixed(2);
+  priceManuallyEdited=true;
+ }else{
+  document.getElementById('clientName').value='';
+  document.getElementById('payment').value='À définir';
+  document.getElementById('status').value='En attente';
+  document.getElementById('orderNotes').value='';
+  document.getElementById('orderPrice').value='';
+  priceManuallyEdited=false;
+ }
+ renderProductPicker();updateTotal();
  setTimeout(()=>document.getElementById('clientName').focus(),50);
 }
-function closeOrder(){document.getElementById('orderModal').classList.remove('show');editingId=null}
-function addItemLine(product='',qty=1){
- const wrap=document.getElementById('itemsEditor');const row=document.createElement('div');row.className='item-line';
- row.innerHTML=`<select class="form-select item-product" onchange="updateTotal()">${productOptions(product)}</select><select class="form-select item-qty" onchange="updateTotal()">${qtyOptions(qty)}</select><button class="remove-item" type="button" onclick="this.parentElement.remove();updateTotal()">×</button>`;
- wrap.appendChild(row);updateTotal();
+function closeOrder(){document.getElementById('orderModal').classList.remove('show');editingId=null;draftQty={}}
+function availableForDraft(name){return stockAvailable(name,editingId)}
+function totalDraftQty(){return Object.values(draftQty).reduce((s,q)=>s+(Number(q)||0),0)}
+function renderProductPicker(){
+ const wrap=document.getElementById('itemsEditor');
+ wrap.innerHTML=products.map(p=>{
+  const q=Number(draftQty[p.name]||0);const available=availableForDraft(p.name);const total=totalDraftQty();
+  const canPlus=q<available && total<30;
+  const canMinus=q>0;
+  return `<div class="cart-product ${q>0?'selected':''}">
+    <div class="cart-product-info"><div class="cart-product-name">${esc(p.name)}</div><div class="cart-product-stock">${available} disponible${available>1?'s':''}</div></div>
+    <div class="stepper"><button type="button" aria-label="Retirer" ${canMinus?'':'disabled'} onclick="changeDraftQty('${esc(p.name).replace(/'/g,"\\'")}',-1)">−</button><span class="stepper-value">${q}</span><button type="button" aria-label="Ajouter" ${canPlus?'':'disabled'} onclick="changeDraftQty('${esc(p.name).replace(/'/g,"\\'")}',1)">+</button></div>
+  </div>`;
+ }).join('');
 }
-function readItems(){
- const rows=[...document.querySelectorAll('.item-line')];const map=new Map();
- for(const row of rows){const product=row.querySelector('.item-product')?.value;const qty=Number(row.querySelector('.item-qty')?.value||0);if(product&&qty>0)map.set(product,(map.get(product)||0)+qty)}
- return [...map.entries()].map(([product,qty])=>({product,qty}));
+function changeDraftQty(name,delta){
+ const current=Number(draftQty[name]||0);const next=current+delta;const available=availableForDraft(name);const total=totalDraftQty();
+ if(next<0||next>available)return;if(delta>0&&total>=30)return;
+ if(next===0)delete draftQty[name];else draftQty[name]=next;
+ renderProductPicker();updateTotal();
 }
-function updateTotal(){const q=totalQty(readItems());const suggested=priceFor(q);const price=document.getElementById('orderPrice');if(price&&!priceManuallyEdited)price.value=suggested.toFixed(2);document.getElementById('orderTotal').textContent=money(priceManuallyEdited?Number(price.value||0):suggested)}
+function readItems(){return Object.entries(draftQty).filter(([,qty])=>Number(qty)>0).map(([product,qty])=>({product,qty:Number(qty)}))}
+function updateTotal(){
+ const q=totalDraftQty();const suggested=priceFor(q);const price=document.getElementById('orderPrice');
+ if(price&&!priceManuallyEdited)price.value=suggested.toFixed(2);
+ document.getElementById('orderTotal').textContent=money(priceManuallyEdited?Number(price.value||0):suggested);
+ document.getElementById('cartQty').textContent=`${q} puff${q>1?'s':''} · ${q? 'quantité sélectionnée':'aucun produit sélectionné'}`;
+}
 document.addEventListener('input',e=>{if(e.target&&e.target.id==='orderPrice'){priceManuallyEdited=true;document.getElementById('orderTotal').textContent=money(Number(e.target.value||0))}});
 function saveOrder(){
- const client=document.getElementById('clientName').value.trim();const items=readItems();const payment=document.getElementById('payment').value;const status=document.getElementById('status').value;const finalPrice=Math.max(0,Number(document.getElementById('orderPrice').value||0));
- if(!client){alert('Indique le prénom du client.');return} if(!items.length){alert('Ajoutez au moins un produit.');return}
+ const client=document.getElementById('clientName').value.trim();const items=readItems();const payment=document.getElementById('payment').value;const status=document.getElementById('status').value;const notes=document.getElementById('orderNotes').value.trim();const finalPrice=Math.max(0,Number(document.getElementById('orderPrice').value||0));
+ if(!client){alert('Indique le prénom du client.');return} if(!items.length){alert('Sélectionne au moins un produit.');return}
  const q=totalQty(items);if(q<1||q>30){alert('La quantité totale doit être comprise entre 1 et 30.');return}
  for(const it of items){const available=stockAvailable(it.product,editingId);if(it.qty>available){alert(`Stock insuffisant pour ${it.product}. Disponible : ${available}.`);return}}
  const now=new Date().toISOString();
- if(editingId){const o=orders.find(x=>x.id===editingId);restore(o.items);o.client=client;o.items=items;o.payment=payment;o.status=status;o.total=finalPrice;o.updatedAt=now;consume(items)}
- else{consume(items);orders.unshift({id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),client,items,payment,status,total:finalPrice,createdAt:now})}
+ if(editingId){const o=orders.find(x=>x.id===editingId);restore(o.items);o.client=client;o.items=items;o.payment=payment;o.status=status;o.total=finalPrice;o.notes=notes;o.updatedAt=now;consume(items)}
+ else{consume(items);orders.unshift({id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),client,items,payment,status,total:finalPrice,notes,createdAt:now})}
  save();closeOrder();render();
 }
 function deleteOrder(id){const o=orders.find(x=>x.id===id);if(!o)return;if(!confirm(`Supprimer la commande de ${o.client} ?`))return;restore(o.items);orders=orders.filter(x=>x.id!==id);save();render()}
@@ -242,28 +302,57 @@ function changeStatus(id,value){const o=orders.find(x=>x.id===id);if(!o)return;o
 function editOrder(id){openOrder(id)}
 function renderOrders(){
  const q=(document.getElementById('search').value||'').toLowerCase().trim(),sf=document.getElementById('statusFilter').value,pf=document.getElementById('paymentFilter').value;
- const list=orders.filter(o=>{const text=[o.client,...o.items.map(i=>i.product)].join(' ').toLowerCase();return(!q||text.includes(q))&&(!sf||o.status===sf)&&(!pf||o.payment===pf)});
+ const list=orders.filter(o=>{const text=[o.client,...(o.items||[]).map(i=>i.product)].join(' ').toLowerCase();return(!q||text.includes(q))&&(!sf||o.status===sf)&&(!pf||o.payment===pf)});
  document.getElementById('resultCount').textContent=`${list.length} commande${list.length>1?'s':''}`;
  const body=document.getElementById('ordersBody');
  if(!list.length){body.innerHTML='<div class="empty-order">Aucune commande trouvée.</div>';return}
- body.innerHTML=list.map(o=>`<article class="order-card">
+ body.innerHTML=list.map(o=>`<article class="order-card" onclick="openOrderDetail('${o.id}')">
    <div class="order-main">
-     <div class="order-client-wrap">
-       <div class="order-client">${esc(o.client)}</div>
-       <div class="order-date">${dateText(o.createdAt)}</div>
-     </div>
+     <div class="order-client-wrap"><div class="order-client">${esc(o.client)}</div><div class="order-date">${dateText(o.createdAt)}</div></div>
      <div class="order-total">${money(o.total)}</div>
    </div>
-   <div class="order-products">${o.items.map(i=>`<span class="product-chip"><b>${i.qty}×</b> ${esc(i.product)}</span>`).join('')}</div>
+   <div class="order-products">${(o.items||[]).map(i=>`<span class="product-chip"><b>${i.qty}×</b> ${esc(i.product)}</span>`).join('')}</div>
    <div class="order-footer">
-     <div class="order-meta"><span class="payment-pill">${esc(o.payment)}</span></div>
-     <div class="order-controls">
+     <div class="order-meta"><span class="payment-pill">${esc(o.payment||'À définir')}</span></div>
+     <div class="order-controls" onclick="event.stopPropagation()">
        <select class="status-select order-status ${o.status==='Validée'?'is-valid':'is-pending'}" onchange="changeStatus('${o.id}',this.value)">${STATUSES.map(s=>`<option ${s===o.status?'selected':''}>${s}</option>`).join('')}</select>
-       <div class="row-actions"><button class="icon-btn" title="Modifier" onclick="editOrder('${o.id}')">✎</button><button class="icon-btn danger-btn" title="Supprimer" onclick="deleteOrder('${o.id}')">×</button></div>
+       <div class="row-actions"><button class="icon-btn" title="Modifier" onclick="event.stopPropagation();editOrder('${o.id}')">✎</button><button class="icon-btn danger-btn" title="Supprimer" onclick="event.stopPropagation();deleteOrder('${o.id}')">×</button></div>
      </div>
    </div>
  </article>`).join('');
 }
+function openOrderDetail(id){
+ const o=orders.find(x=>String(x.id)===String(id));if(!o)return;
+ const valid=String(o.status||'').trim()==='Validée';const qty=totalQty(o.items||[]);const cost=qty*COST;const benefit=Number(o.total||0)-cost;
+ document.getElementById('orderDetailContent').innerHTML=`
+  <div class="detail-hero"><div><div class="detail-client">${esc(o.client)}</div><div class="detail-date">Commande #${esc(o.id)} · ${new Date(o.createdAt).toLocaleString('fr-BE',{dateStyle:'medium',timeStyle:'short'})}</div><span class="detail-status ${valid?'valid':'pending'}">${esc(o.status)}</span></div><div class="detail-total">${money(o.total)}</div></div>
+  <div class="detail-section"><h3>Produits · ${qty} article${qty>1?'s':''}</h3><div class="detail-items">${(o.items||[]).map(i=>`<div class="detail-item"><div><div class="detail-item-name">${esc(i.product)}</div><div class="detail-item-qty">Quantité : ${i.qty}</div></div><b>${i.qty}×</b></div>`).join('')}</div></div>
+  <div class="detail-section"><h3>Informations</h3><div class="detail-info"><div class="detail-info-card"><span>Paiement</span><b>${esc(o.payment||'À définir')}</b></div><div class="detail-info-card"><span>Quantité totale</span><b>${qty} puff${qty>1?'s':''}</b></div></div></div>
+  ${o.notes?`<div class="detail-section"><h3>Note</h3><div class="detail-note">${esc(o.notes)}</div></div>`:''}
+  <div class="form-actions"><button class="ghost" onclick="closeOrderDetail()">Fermer</button><button class="primary" onclick="closeOrderDetail();editOrder('${o.id}')">Modifier la commande</button></div>`;
+ document.getElementById('orderDetailModal').classList.add('show');
+}
+function closeOrderDetail(){document.getElementById('orderDetailModal').classList.remove('show')}
+function ensureOrderNumbers(){
+  let changed = false;
+  const used = new Set();
+  orders.forEach(o => {
+    const n = Number(o.orderNumber);
+    if(Number.isInteger(n) && n > 0) used.add(n);
+  });
+  let next = 1;
+  [...orders].sort((a,b)=>new Date(a.date)-new Date(b.date)).forEach(o => {
+    if(!(Number.isInteger(Number(o.orderNumber)) && Number(o.orderNumber)>0)){
+      while(used.has(next)) next++;
+      o.orderNumber = next++;
+      used.add(o.orderNumber);
+      changed = true;
+    }
+  });
+  if(changed) localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+}
+ensureOrderNumbers();
+
 function renderStats(){const valid=orders.filter(o=>String(o.status||'').trim().toLowerCase()==='validée');const revenue=valid.reduce((s,o)=>s+Number(o.total||0),0);const sold=valid.reduce((s,o)=>s+totalQty(o.items||[]),0);document.getElementById('statOrders').textContent=valid.length;document.getElementById('statRevenue').textContent=money(revenue);document.getElementById('statProfit').textContent=money(revenue-sold*COST)}
 function renderStock(){const total=products.reduce((s,p)=>s+Number(p.stock||0),0);document.getElementById('stockTotal').textContent=`${total} restant${total>1?'s':''}`;document.getElementById('stockGrid').innerHTML=products.map(p=>{const n=Number(p.stock)||0;return `<div class="stock-item ${n===0?'empty':n<=5?'low':''}"><div class="name">${esc(p.name)}</div><div class="qty">${n}</div></div>`}).join('')}
 function openProducts(){renderProducts();document.getElementById('productsModal').classList.add('show')}
