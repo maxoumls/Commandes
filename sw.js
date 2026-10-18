@@ -1,4 +1,4 @@
-const CACHE='commandes-creation-simple-v3';
+const CACHE='commandes-creation-simple-v4';
 
 self.addEventListener('install', e => {
   e.waitUntil(
