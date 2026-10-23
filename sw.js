@@ -1,9 +1,9 @@
-const CACHE='commandes-creation-simple-v4';
+const CACHE='commandes-stock-v5-logo';
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE)
-      .then(c => c.addAll(['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png']))
+      .then(c => c.addAll(['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./Commandes_logo_2.png']))
       .then(() => self.skipWaiting())
   );
 });
