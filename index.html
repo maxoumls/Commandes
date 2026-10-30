@@ -229,7 +229,7 @@ html,body{width:100%;overflow-x:hidden}
 </div>
 <script>
 
-const PRICE={1:20,2:40,3:50,4:70,5:90,6:100,7:120,8:140,9:160,10:150,20:300,30:450};
+const PRICE={1:15,2:30,3:40,4:55,5:70,6:80,7:95,8:110,9:120,10:130,20:300,30:450};
 const COST=6.35;
 const DEFAULT_PRODUCTS=[
  {name:'Peach Berry',stock:30,purchasePrice:6.35,resalePrice:20},
@@ -257,7 +257,7 @@ function consume(items){for(const it of items){const p=productByName(it.product)
 function restore(items){for(const it of items){const p=productByName(it.product);if(p)p.stock=(Number(p.stock)||0)+Number(it.qty||0)}}
 function qtyOptions(value=1){return Array.from({length:30},(_,i)=>{const q=i+1;return `<option value="${q}" ${q===Number(value)?'selected':''}>${q}</option>`}).join('')}
 function productOptions(selected=''){
- return products.map(p=>`<option value="${esc(p.name)}" ${p.name===selected?'selected':''}>${esc(p.name)} — ${p.stock} en stock</option>`).join('')
+ return products.filter(p=>(Number(p.stock)||0)>0).map(p=>`<option value="${esc(p.name)}" ${p.name===selected?'selected':''}>${esc(p.name)} — ${p.stock} en stock</option>`).join('')
 }
 function fillFilters(){
  document.getElementById('status').innerHTML=STATUSES.map(s=>`<option>${s}</option>`).join('');
@@ -265,7 +265,7 @@ function fillFilters(){
 function renderQuickProducts(selectedItems=[]){
  const selected=new Map((selectedItems||[]).map(x=>[x.product,Number(x.qty)||0]));
  const wrap=document.getElementById('itemsEditor');
- wrap.innerHTML=products.map(p=>{
+ wrap.innerHTML=products.filter(p=>(Number(p.stock)||0)>0).map(p=>{
    const q=selected.get(p.name)||0;
    const max=stockAvailable(p.name,editingId);
    return `<div class="quick-product">
@@ -361,16 +361,16 @@ function setOrderFilter(filter){orderFilter=orderFilter===filter?'all':filter;re
 
 function goTo(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
 function stockBundlePrice(q){
- let total=0; while(q>=10){total+=150;q-=10;} if(q>0) total+=priceFor(q); return total;
+ let total=0; while(q>=30){total+=450;q-=30;} while(q>=20){total+=300;q-=20;} while(q>=10){total+=130;q-=10;} if(q>0) total+=priceFor(q); return total;
 }
 
 function orderCost(items){return (items||[]).reduce((sum,it)=>{const p=productByName(it.product);const unit=p?Number(p.purchasePrice||0):COST;return sum+(Number(it.qty)||0)*unit},0)}
 function renderStats(){const valid=orders.filter(o=>String(o.status||'').trim().toLowerCase()==='validée');const revenue=valid.reduce((s,o)=>s+Number(o.total||0),0);const cost=valid.reduce((s,o)=>s+orderCost(o.items),0);document.getElementById('statOrders').textContent=valid.length;document.getElementById('statRevenue').textContent=money(revenue);document.getElementById('statProfit').textContent=money(revenue-cost)}
-function renderStock(){const total=products.reduce((s,p)=>s+Number(p.stock||0),0);document.getElementById('stockTotal').textContent=`${total} restant${total>1?'s':''}`;document.getElementById('stockGrid').innerHTML=products.map(p=>{const n=Number(p.stock)||0;return `<div class="stock-item ${n===0?'empty':n<=5?'low':''}"><div class="name">${esc(p.name)}</div><div class="qty">${n}</div></div>`}).join('');const potential=stockBundlePrice(total);renderPending()}
+function renderStock(){const total=products.reduce((s,p)=>s+Number(p.stock||0),0);document.getElementById('stockTotal').textContent=`${total} restant${total>1?'s':''}`;document.getElementById('stockGrid').innerHTML=products.filter(p=>(Number(p.stock)||0)>0).map(p=>{const n=Number(p.stock)||0;return `<div class="stock-item ${n===0?'empty':n<=5?'low':''}"><div class="name">${esc(p.name)}</div><div class="qty">${n}</div></div>`}).join('');const potential=stockBundlePrice(total);renderPending()}
 let editingProductIndex=null;
 function openStockPage(){document.getElementById('homeView').style.display='none';document.getElementById('stockPage').classList.add('show');renderStockManagement();window.scrollTo({top:0,behavior:'smooth'})}
 function closeStockPage(){document.getElementById('stockPage').classList.remove('show');document.getElementById('homeView').style.display='block';render()}
-function renderStockManagement(){const total=products.reduce((s,p)=>s+Number(p.stock||0),0);const value=products.reduce((s,p)=>s+(Number(p.stock)||0)*(Number(p.purchasePrice)||0),0);document.getElementById('manageProductCount').textContent=products.length;document.getElementById('manageStockTotal').textContent=total;document.getElementById('manageStockValue').textContent=money(value);document.getElementById('productsManagement').innerHTML=products.map((p,i)=>{const stock=Number(p.stock)||0;const purchase=Number(p.purchasePrice)||0;const resale=Number(p.resalePrice)||0;const margin=resale-purchase;const state=stock===0?'empty':stock<=5?'low':'';return `<article class="product-management-card"><div class="product-management-top"><div class="product-management-name">${esc(p.name)}</div><span class="product-stock-badge ${state}">${stock} en stock</span></div><div class="product-price-grid"><div class="product-price-box"><span>Prix d'achat</span><b>${money(purchase)}</b></div><div class="product-price-box"><span>Prix de revente</span><b>${money(resale)}</b></div></div><div class="product-margin"><span>Marge indicative / unité</span><b>${money(margin)}</b></div><button class="ghost product-edit-btn" onclick="openProductEditor(${i})">Modifier l'article</button></article>`}).join('')}
+function renderStockManagement(){const total=products.reduce((s,p)=>s+Number(p.stock||0),0);const value=products.reduce((s,p)=>s+(Number(p.stock)||0)*(Number(p.purchasePrice)||0),0);document.getElementById('manageProductCount').textContent=products.filter(p=>(Number(p.stock)||0)>0).length;document.getElementById('manageStockTotal').textContent=total;document.getElementById('manageStockValue').textContent=money(value);document.getElementById('productsManagement').innerHTML=products.map((p,i)=>({p,i})).filter(x=>(Number(x.p.stock)||0)>0).map(({p,i})=>{const stock=Number(p.stock)||0;const purchase=Number(p.purchasePrice)||0;const resale=Number(p.resalePrice)||0;const margin=resale-purchase;const state=stock===0?'empty':stock<=5?'low':'';return `<article class="product-management-card"><div class="product-management-top"><div class="product-management-name">${esc(p.name)}</div><span class="product-stock-badge ${state}">${stock} en stock</span></div><div class="product-price-grid"><div class="product-price-box"><span>Prix d'achat</span><b>${money(purchase)}</b></div><div class="product-price-box"><span>Prix de revente</span><b>${money(resale)}</b></div></div><div class="product-margin"><span>Marge indicative / unité</span><b>${money(margin)}</b></div><button class="ghost product-edit-btn" onclick="openProductEditor(${i})">Modifier l'article</button></article>`}).join('')}
 function openProductEditor(index){editingProductIndex=index;const p=products[index];if(!p)return;document.getElementById('productEditTitle').textContent=`Modifier ${p.name}`;document.getElementById('editProductName').value=p.name;document.getElementById('editProductStock').value=Number(p.stock)||0;document.getElementById('editProductPurchase').value=Number(p.purchasePrice||0).toFixed(2);document.getElementById('editProductResale').value=Number(p.resalePrice||0).toFixed(2);document.getElementById('productEditModal').classList.add('show')}
 function openNewProductEditor(){editingProductIndex=-1;document.getElementById('productEditTitle').textContent='Ajouter un article';document.getElementById('editProductName').value='';document.getElementById('editProductStock').value=0;document.getElementById('editProductPurchase').value='';document.getElementById('editProductResale').value='';document.getElementById('productEditModal').classList.add('show');setTimeout(()=>document.getElementById('editProductName').focus(),50)}
 function closeProductEditor(){document.getElementById('productEditModal').classList.remove('show');editingProductIndex=null}
