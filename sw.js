@@ -1,9 +1,16 @@
-const CACHE='commandes-stock-v5-logo';
+const CACHE='commandes-prix15-v6';
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE)
-      .then(c => c.addAll(['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./Commandes_logo_2.png']))
+      .then(c => c.addAll([
+        './',
+        './index.html',
+        './manifest.webmanifest',
+        './sw.js',
+        './icon-192.png',
+        './icon-512.png'
+      ]))
       .then(() => self.skipWaiting())
   );
 });
@@ -11,7 +18,9 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(keys => Promise.all(
+        keys.filter(k => k !== CACHE).map(k => caches.delete(k))
+      ))
       .then(() => self.clients.claim())
   );
 });
